@@ -19,7 +19,7 @@ IF OBJECT_ID('bronze.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE bronze.crm_cust_info;
 GO
 
-CREATE TABLE bronze.cmr_cust_info(
+CREATE TABLE bronze.crm_cust_info(
 	cst_id INT,
 	cst_key NVARCHAR(50),
 	cst_firstname NVARCHAR(50),
@@ -31,11 +31,11 @@ CREATE TABLE bronze.cmr_cust_info(
 GO
 
 
-IF OBJECT_ID('bronze.cmr_prd_info', 'U') IS NOT NULL
-    DROP TABLE bronze.cmr_prd_info;
+IF OBJECT_ID('bronze.crm_prd_info', 'U') IS NOT NULL
+    DROP TABLE bronze.crm_prd_info;
 GO
 
-CREATE TABLE bronze.cmr_prd_info(
+CREATE TABLE bronze.crm_prd_info(
 	prd_id INT,
 	prd_key NVARCHAR(50),
 	prd_nm NVARCHAR(50),
@@ -46,11 +46,11 @@ CREATE TABLE bronze.cmr_prd_info(
 );
 GO
 
-IF OBJECT_ID('bronze.cmr_sales_details', 'U') IS NOT NULL
-    DROP TABLE bronze.cmr_sales_details;
+IF OBJECT_ID('bronze.crm_sales_details', 'U') IS NOT NULL
+    DROP TABLE bronze.crm_sales_details;
 GO
 
-CREATE TABLE bronze.cmr_sales_details(
+CREATE TABLE bronze.crm_sales_details(
 	sls_ord_num		NVARCHAR(50),
 	sls_prd_key		NVARCHAR(50),
 	sls_cust_id		INT,
@@ -98,3 +98,4 @@ CREATE TABLE bronze.erp_px_cat_g1v2(
 	MAINTENANCE NVARCHAR(50)
 );
 GO
+
