@@ -34,9 +34,9 @@ BEGIN
 
 		SET @start_time = GETDATE();
 		PRINT '>>LIMPIANDO DATOS DE: cmr_cust_info'
-		TRUNCATE TABLE bronze.cmr_cust_info
+		TRUNCATE TABLE bronze.crm_cust_info
 		PRINT '>>INSERTANDO DATOS EN: bronze.cmr_cust_info'
-		BULK INSERT bronze.cmr_cust_info
+		BULK INSERT bronze.crm_cust_info
 		FROM 'C:\Users\Heiler\Documents\Proyecto DWH SQL\source_cmr\cust_info.csv'
 		WITH (
 			FIRSTROW = 2,
@@ -50,9 +50,9 @@ BEGIN
 
 		SET @start_time = GETDATE();
 		PRINT '>>LIMPIANDO DATOS DE: cmr_prd_info'
-		TRUNCATE TABLE bronze.cmr_prd_info
+		TRUNCATE TABLE bronze.crm_prd_info
 		PRINT '>>INSERTANDO DATOS EN: bronze.cmr_prd_info'
-		BULK INSERT bronze.cmr_prd_info
+		BULK INSERT bronze.crm_prd_info
 		FROM 'C:\Users\Heiler\Documents\Proyecto DWH SQL\source_cmr\prd_info.csv'
 		WITH (
 			FIRSTROW = 2,
@@ -65,9 +65,9 @@ BEGIN
 
 		SET @start_time = GETDATE();
 		PRINT '>>LIMPIANDO DATOS DE: cmr_sales_details'
-		TRUNCATE TABLE bronze.cmr_sales_details
+		TRUNCATE TABLE bronze.crm_sales_details
 		PRINT '>>INSERTANDO DATOS EN: cmr_sales_details'
-		BULK INSERT bronze.cmr_sales_details
+		BULK INSERT bronze.crm_sales_details
 		FROM 'C:\Users\Heiler\Documents\Proyecto DWH SQL\source_cmr\sales_details.csv'
 		WITH (
 			FIRSTROW = 2,
