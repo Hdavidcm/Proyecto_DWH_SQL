@@ -15,6 +15,8 @@ Si ocurre algún error durante la carga, alguna tabla podría quedar vacía o in
 
 Parámetros: Este procedimiento almacenado no requiere parámetros para su ejecución.
 
+Uso: EXEC bronze.load_bronze;
+
 */
 
 
