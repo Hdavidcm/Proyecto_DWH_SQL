@@ -13,7 +13,7 @@ Uso: Estas vistas pueden consultarse directamente para realizar análisis y gene
 -- =============================================================================
 -- Creacion de la Dimension: gold.dim_customers
 -- =============================================================================
-CREATE VIEW gold.dim_customers AS
+CREATE OR ALTER VIEW gold.dim_customers AS
 SELECT 
 	ROW_NUMBER() OVER(ORDER BY cst_id) AS Customer_Key,
 	c.cst_id AS Customer_Id,
@@ -32,13 +32,14 @@ FROM silver.crm_cust_info c
 LEFT JOIN silver.erp_loc_a101 p
 	ON p.cid = c.cst_key
 LEFT JOIN silver.erp_cust_az12 d
-	ON d.cid = c.cst_key
+	ON d.cid = c.cst_key;
+GO
 
 -- =============================================================================
 -- Creacion de la Dimension: gold.dim_products
 -- =============================================================================
 
-CREATE VIEW gold.dim_products AS
+CREATE OR ALTER VIEW gold.dim_products AS
 SELECT 
 	ROW_NUMBER() OVER(ORDER BY pn.prd_start_dt,pn.prd_key) AS product_key,
 	pn.prd_id AS product_id,
@@ -53,14 +54,15 @@ SELECT
 	pn.prd_start_dt AS start_date
 FROM silver.crm_prd_info pn
 LEFT JOIN silver.erp_px_cat_g1v2 ct ON pn.cat_id = ct.ID
-WHERE pn.prd_end_dt IS NULL
+WHERE pn.prd_end_dt IS NULL;
+GO
 
 
 -- =============================================================================
--- Creacion de la tabal de hechos: gold.fact_sales
+-- Creacion de la tabla de hechos: gold.fact_sales
 -- =============================================================================
 
-CREATE VIEW gold.fact_sales AS
+CREATE OR ALTER VIEW gold.fact_sales AS
 SELECT 
 	sd.sls_ord_num AS order_number,
 	pr.product_key,
@@ -75,5 +77,6 @@ FROM silver.crm_sales_details sd
 LEFT JOIN gold.dim_products pr
 	ON sd.sls_prd_key = pr.product_number
 LEFT JOIN gold.dim_customers cu
-	ON cu.Customer_Id = sd.sls_cust_id
+	ON cu.Customer_Id = sd.sls_cust_id;
+GO
 
