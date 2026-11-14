@@ -62,7 +62,7 @@ Los archivos se abren con draw.io/diagrams.net. Gold se implementa con vistas y 
 > **Atención:** `init_database.sql` elimina la base `DataWarehouse` si existe. Los DDL de Bronze y Silver recrean tablas y los procedimientos vacían sus destinos antes de recargar. Utiliza una instancia de práctica y revisa los scripts antes de ejecutarlos.
 
 ### Preparación
-1. Obtén los archivos del material original del ejercicio. Consulta [datasets/README.md](datasets/README.md).
+1.Obtén los archivos desde los materiales del tutorial original de Data with Baraa. La referencia general está en el final.
 2. Ajusta las seis rutas de `BULK INSERT` en `Scripts/bronze/proc_load_bronze.sql` a la ubicación real de los CSV.
 3. Verifica que la cuenta del servicio SQL Server pueda leer esa ubicación. Si SQL Server está en otra máquina, las rutas deben ser accesibles desde esa máquina.
 
