@@ -27,7 +27,7 @@ Los cuatro [diagramas editables](documentos/diagramas/README.md) documentan dist
 | Linaje | [Flujo de datos y dependencias](documentos/diagramas/Diagrama%20de%20Flujo.drawio) |
 | Modelo analítico | [Esquema estrella de ventas](documentos/diagramas/Data%20Model.drawio) |
 
-Los archivos se abren con draw.io/diagrams.net. Gold se implementa con vistas y las relaciones representan el modelo lógico.
+Los archivos editables se abren con draw.io/diagrams.net. También puedes [consultar el modelo estrella en PDF](documentos/diagramas/Data%20Model.pdf). Gold se implementa con vistas y las relaciones representan el modelo lógico.
 
 ## Capacidades presentes en el código
 - **Ingesta:** carga completa de seis CSV con `TRUNCATE` y `BULK INSERT`.
@@ -52,6 +52,21 @@ Los archivos se abren con draw.io/diagrams.net. Gold se implementa con vistas y 
 | [documentos/arquitectura.md](documentos/arquitectura.md) | Modelo, reglas y decisiones |
 | [documentos/roadmap.md](documentos/roadmap.md) | Estado, pendientes y criterios de aceptación |
 
+## Datos de origen
+
+Los seis CSV del ejercicio están incluidos en el repositorio:
+
+| Fuente | Archivo | Destino Bronze |
+| --- | --- | --- |
+| CRM | [cust_info.csv](datasets/Source_CRM/cust_info.csv) | `bronze.crm_cust_info` |
+| CRM | [prd_info.csv](datasets/Source_CRM/prd_info.csv) | `bronze.crm_prd_info` |
+| CRM | [sales_details.csv](datasets/Source_CRM/sales_details.csv) | `bronze.crm_sales_details` |
+| ERP | [CUST_AZ12.csv](datasets/Source_ERP/CUST_AZ12.csv) | `bronze.erp_cust_az12` |
+| ERP | [LOC_A101.csv](datasets/Source_ERP/LOC_A101.csv) | `bronze.erp_loc_a101` |
+| ERP | [PX_CAT_G1V2.csv](datasets/Source_ERP/PX_CAT_G1V2.csv) | `bronze.erp_px_cat_g1v2` |
+
+Descarga el repositorio completo con **Code → Download ZIP**, o clónalo para conservar la estructura de carpetas. Consulta la [guía de datos](datasets/README.md) para configurar la carga.
+
 ## Ejecución local
 ### Requisitos
 - Una instancia de SQL Server compatible con `CREATE OR ALTER` y `TRIM` (SQL Server 2017 o posterior).
@@ -62,8 +77,8 @@ Los archivos se abren con draw.io/diagrams.net. Gold se implementa con vistas y 
 > **Atención:** `init_database.sql` elimina la base `DataWarehouse` si existe. Los DDL de Bronze y Silver recrean tablas y los procedimientos vacían sus destinos antes de recargar. Utiliza una instancia de práctica y revisa los scripts antes de ejecutarlos.
 
 ### Preparación
-1.Obtén los archivos desde los materiales del tutorial original de Data with Baraa. La referencia general está en el final.
-2. Ajusta las seis rutas de `BULK INSERT` en `Scripts/bronze/proc_load_bronze.sql` a la ubicación real de los CSV.
+1. Descarga o clona este repositorio. Los CSV están en `datasets/Source_CRM/` y `datasets/Source_ERP/`.
+2. Ajusta las seis rutas de `BULK INSERT` en [proc_load_bronze.sql](Scripts/bronze/proc_load_bronze.sql) a la ubicación local de esos archivos. Respeta los nombres y mayúsculas de la tabla anterior; las rutas personales actuales no se actualizan automáticamente al descargar el repositorio.
 3. Verifica que la cuenta del servicio SQL Server pueda leer esa ubicación. Si SQL Server está en otra máquina, las rutas deben ser accesibles desde esa máquina.
 
 ### Orden de ejecución
@@ -121,7 +136,7 @@ Las 19 fechas proceden de 17 ceros y 2 valores con longitud incorrecta. Las fila
 Consulta el [informe completo](documentos/resultados_validacion.md) y ejecuta [Validaciones_Portafolio.sql](Pruebas/Validaciones_Portafolio.sql) para repetir los controles. La evidencia corresponde a la base local existente; no acredita una instalación desde cero ni una comparación fila a fila. Siguen pendientes versión del motor, tiempos de carga y conteos completos de las seis tablas por capa.
 
 ## Limitaciones conocidas
-- Los CSV no están incluidos y las rutas de carga son locales.
+- Los seis CSV están incluidos; las rutas de `BULK INSERT` siguen siendo locales y deben ajustarse antes de ejecutar.
 - Las cargas son completas; no existe carga incremental ni orquestación programada.
 - Los errores se imprimen, sin `THROW`, rollback global ni registro persistente de ejecución.
 - Validar que una fecha tenga ocho dígitos no garantiza que sea una fecha válida.
