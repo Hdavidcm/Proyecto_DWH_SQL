@@ -1,6 +1,6 @@
 # Estado y próximos pasos
 
-El estado refleja archivos presentes y revisión estática. No acredita ejecución, resultados ni mejoras completadas fuera del repositorio.
+El estado combina revisión del código y [resultados locales reportados por el autor](resultados_validacion.md). La reproducción desde una base vacía sigue pendiente.
 
 ## Código presente
 - [x] Inicialización de DataWarehouse y esquemas.
@@ -9,7 +9,8 @@ El estado refleja archivos presentes y revisión estática. No acredita ejecuci�
 - [x] Vistas de clientes, productos y ventas en Gold.
 - [x] Consultas exploratorias y validaciones parciales.
 - [x] Documentación de arquitectura e instrucciones de ejecución.
-- [ ] Ejecución completa reproducida y resultados documentados.
+- [x] Documentación de controles ejecutados en la base local existente.
+- [ ] Ejecución completa reproducida desde una base vacía.
 
 ## Prioridad 1: reproducibilidad
 - [ ] Añadir referencia exacta del tutorial y de sus datasets.
@@ -23,7 +24,8 @@ El estado refleja archivos presentes y revisión estática. No acredita ejecuci�
 - [ ] Tratar fechas inválidas con conversión tolerante y registrar los rechazos.
 - [ ] Propagar errores con THROW y definir la estrategia de recuperación de una carga parcial.
 - [ ] Validar duplicados en ERP antes de integrar dimensiones.
-- [ ] Añadir controles Gold de unicidad, claves nulas y ventas sin correspondencia.
+- [x] Añadir consultas de diagnóstico Gold de unicidad de claves de negocio y ventas sin correspondencia.
+- [ ] Convertir los diagnósticos en controles automatizados que detecten fallos.
 - [ ] Separar diagnósticos Bronze de comprobaciones Silver/Gold.
 - [ ] Revisar precisión numérica de importes, costos y precios antes de cambiar tipos.
 

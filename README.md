@@ -3,7 +3,7 @@
 
 Proyecto práctico en desarrollo para integrar archivos de fuentes CRM y ERP, transformar datos y exponer un modelo dimensional de clientes, productos y ventas.
 
-El repositorio contiene scripts de ingesta, transformación, vistas analíticas y consultas de validación. La presencia del código no implica que todas las validaciones hayan sido ejecutadas satisfactoriamente; los resultados de ejecución están pendientes de documentar.
+El repositorio contiene scripts de ingesta, transformación, vistas analíticas y consultas de validación. Los resultados de consultas ejecutadas en la instancia local del autor se documentan en [Resultados de validación](documentos/resultados_validacion.md), con sus excepciones y alcance.
 
 ## Objetivo
 Construir una base de datos analítica que permita relacionar ventas con clientes, productos, categorías y países. El proyecto permite practicar cómo convertir datos de origen heterogéneos en estructuras consistentes para el análisis.
@@ -91,11 +91,22 @@ ORDER BY total_sales DESC;
 ## Validación y resultados
 El script actual combina consultas exploratorias con controles de inconsistencias. Un resultado con filas puede ser esperado en un diagnóstico de Bronze; debe interpretarse según la regla evaluada. Todavía no constituye una batería automatizada de pruebas.
 
-Pendiente de registrar en una ejecución local:
-- Conteos de filas por tabla y capa.
-- Duplicados y nulos antes y después de las transformaciones.
-- Ventas sin correspondencia en las dimensiones.
-- Tiempos de carga y evidencia de las consultas analíticas.
+Resultados reportados desde SSMS por el autor (11 y 13 de noviembre de 2026):
+
+| Indicador | Resultado |
+| --- | ---: |
+| Clientes CRM Bronze / Silver | 18.493 / 18.484 |
+| IDs nulos excluidos / duplicados excedentes | 3 / 6 |
+| Clientes / productos en Gold | 18.484 / 295 |
+| Ventas Silver / Gold | 60.398 / 60.398 |
+| Importe total Silver / Gold | 29.356.250,00 / 29.356.250,00 |
+| Ventas sin cliente o producto | 0 |
+| Inconsistencias aritméticas según las reglas evaluadas | 0 |
+| Fechas de pedido inválidas representadas como NULL | 19 |
+
+Las 19 fechas proceden de 17 ceros y 2 valores con longitud incorrecta. Las filas se conservan y requieren un grupo “Sin fecha” en análisis temporales. No se ha atribuido moneda al importe.
+
+Consulta el [informe completo](documentos/resultados_validacion.md) y ejecuta [Validaciones_Portafolio.sql](Pruebas/Validaciones_Portafolio.sql) para repetir los controles. La evidencia corresponde a la base local existente; no acredita una instalación desde cero ni una comparación fila a fila. Siguen pendientes versión del motor, tiempos de carga y conteos completos de las seis tablas por capa.
 
 ## Limitaciones conocidas
 - Los CSV no están incluidos y las rutas de carga son locales.
