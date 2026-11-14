@@ -18,16 +18,17 @@ Construir una base de datos analítica que permita relacionar ventas con cliente
 El [modelo de datos y las decisiones técnicas](documentos/arquitectura.md) explican las relaciones y sus limitaciones.
 
 ## Diagramas del proyecto
-Los cuatro [diagramas editables](documentos/diagramas/README.md) documentan distintas perspectivas:
 
-| Perspectiva | Diagrama |
-| --- | --- |
-| Arquitectura | [SQL Server y capas](documentos/diagramas/Diagram%20SQL%20SERVER.drawio) |
-| Integración | [Fuentes y claves de cruce](documentos/diagramas/Diagrama%20Modelo%20de%20integracion.drawio) |
-| Linaje | [Flujo de datos y dependencias](documentos/diagramas/Diagrama%20de%20Flujo.drawio) |
-| Modelo analítico | [Esquema estrella de ventas](documentos/diagramas/Data%20Model.drawio) |
+Los cuatro diagramas están disponibles en PDF para consulta y en draw.io para edición. Consulta el [índice de diagramas](documentos/diagramas/README.md).
 
-Los archivos editables se abren con draw.io/diagrams.net. También puedes [consultar el modelo estrella en PDF](documentos/diagramas/Data%20Model.pdf). Gold se implementa con vistas y las relaciones representan el modelo lógico.
+| Perspectiva | Visualizar | Editar | Propósito |
+| --- | --- | --- | --- |
+| Arquitectura | [PDF](documentos/diagramas/Diagram%20SQL%20SERVER.drawio.pdf) | [draw.io](documentos/diagramas/Diagram%20SQL%20SERVER.drawio) | Fuentes, capas, objetos y consumo |
+| Integración | [PDF](documentos/diagramas/Diagrama%20Modelo%20de%20integracion.drawio.pdf) | [draw.io](documentos/diagramas/Diagrama%20Modelo%20de%20integracion.drawio) | Relación conceptual entre fuentes CRM y ERP |
+| Linaje | [PDF](documentos/diagramas/Diagrama%20de%20Flujo.drawio.pdf) | [draw.io](documentos/diagramas/Diagrama%20de%20Flujo.drawio) | Recorrido de los datos entre capas |
+| Modelo analítico | [PDF](documentos/diagramas/Data%20Model.pdf) | [draw.io](documentos/diagramas/Data%20Model.drawio) | Esquema estrella de ventas |
+
+Los PDF se pueden consultar desde GitHub; los archivos editables se abren con draw.io/diagrams.net. Gold se implementa con vistas y las relaciones representan el modelo lógico.
 
 ## Capacidades presentes en el código
 - **Ingesta:** carga completa de seis CSV con `TRUNCATE` y `BULK INSERT`.
