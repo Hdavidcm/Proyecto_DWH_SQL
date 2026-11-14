@@ -4,7 +4,7 @@ Archivos editables en [diagrams.net](https://app.diagrams.net/). Descarga el arc
 
 | Diagrama | Archivo | Propósito |
 | --- | --- | --- |
-| Arquitectura SQL Server | [Diagram SQL SERVER.drawio](Diagram SQL SERVER.drawio)) | Fuentes, capas, objetos y consumo |
+| Arquitectura SQL Server | [Ver arquitectura SQL Server](documentos/diagramas/Diagram%20SQL%20SERVER.drawio)) | Fuentes, capas, objetos y consumo |
 | Integración de fuentes | [integracion_fuentes.drawio](integracion_fuentes.drawio) | Claves de cruce CRM/ERP tras transformación |
 | Flujo de datos | [flujo_datos.drawio](flujo_datos.drawio) | Linaje entre capas y dependencias Gold |
 | Modelo estrella | [modelo_estrella.drawio](modelo_estrella.drawio) | Dimensiones y detalle de ventas |
