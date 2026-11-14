@@ -1,6 +1,6 @@
 # Datos de entrada
 
-Los CSV del ejercicio no están incluidos en este repositorio. Los archivos llamados `prueba` son marcadores y no contienen datasets.
+Los CSV del ejercicio no están incluidos en este repositorio.
 
 ## Archivos requeridos
 | Fuente | Archivo | Tabla Bronze |
@@ -12,7 +12,7 @@ Los CSV del ejercicio no están incluidos en este repositorio. Los archivos llam
 | ERP | loc_a101.csv | bronze.erp_loc_a101 |
 | ERP | px_cat_g1v2.csv | bronze.erp_px_cat_g1v2 |
 
-Obtén los archivos desde los materiales del tutorial original de Data with Baraa. La referencia general está en el README principal; queda pendiente agregar el enlace exacto al material utilizado. Revisa las condiciones de uso antes de redistribuir datos de terceros.
+Obtén los archivos desde los materiales del tutorial original de Data with Baraa. La referencia general está en el README principal.
 
 ## Configuración
 1. Mantén los nombres y la estructura de columnas del material original.
