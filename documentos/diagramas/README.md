@@ -7,7 +7,7 @@ Archivos editables en [diagrams.net](https://app.diagrams.net/). Descarga el arc
 | Arquitectura SQL Server | [arquitectura SQL Server](https://github.com/Hdavidcm/Proyecto_DWH_SQL/blob/main/documentos/diagramas/Diagram%20SQL%20SERVER.drawio) | Fuentes, capas, objetos y consumo |
 | Integración de fuentes | [integracion_fuentes](https://github.com/Hdavidcm/Proyecto_DWH_SQL/blob/main/documentos/diagramas/Diagrama%20Modelo%20de%20integracion.drawio) | Claves de cruce CRM/ERP tras transformación |
 | Flujo de datos | [flujo_datos.drawio](https://github.com/Hdavidcm/Proyecto_DWH_SQL/blob/main/documentos/diagramas/Diagrama%20de%20Flujo.drawio) | Linaje entre capas y dependencias Gold |
-| Modelo estrella | [modelo_estrella.drawio](https://github.com/Hdavidcm/Proyecto_DWH_SQL/blob/main/documentos/diagramas/Data%20Model.drawio)) | Dimensiones y detalle de ventas |
+| Modelo estrella | [modelo_estrella.drawio](https://github.com/Hdavidcm/Proyecto_DWH_SQL/blob/main/documentos/diagramas/Data%20Model.drawio) | Dimensiones y detalle de ventas |
 
 ## Alcance
 Copias corregidas de los cuatro diagramas proporcionados por el autor. Los originales adjuntos se conservan sin cambios. La implementación de base sigue el ejercicio de Data with Baraa, como se explica en el README principal.
