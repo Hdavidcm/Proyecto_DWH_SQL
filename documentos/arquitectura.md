@@ -1,7 +1,7 @@
 # Arquitectura y modelo de datos
 
 ## Alcance
-Este documento describe el código disponible. No afirma ejecución satisfactoria ni volúmenes procesados. El proyecto parte de un ejercicio guiado de Data with Baraa; las decisiones descritas no se atribuyen como diseños originales del autor del repositorio.
+Este documento describe el código disponible. Los resultados de la ejecución local reportada por el autor están en [Resultados de validación](resultados_validacion.md). El proyecto parte de un ejercicio guiado de Data with Baraa; las decisiones descritas no se atribuyen como diseños originales del autor del repositorio.
 
 ## Flujo por capas
 | Origen | Bronze | Silver | Consumo Gold |
@@ -77,14 +77,14 @@ Gold filtra productos con fecha final nula. El modelo no realiza un JOIN tempora
 ### Manejo de errores y duración
 TRY/CATCH imprime información y los tiempos se muestran con PRINT. No hay log persistente ni propagación del error al ejecutor.
 
-## Evidencia por completar
-Los resultados deben registrarse a partir de una ejecución real. No utilizar cifras de ejemplo como resultados del proyecto.
+## Evidencia y pendientes
+Resultados reportados por el autor desde su base local; consultar el [informe](resultados_validacion.md) para fechas, alcance y excepciones. Los conteos completos y la duración siguen pendientes.
 
 | Control | Resultado real |
 | --- | --- |
 | Conteo de filas de las seis tablas Bronze | Pendiente |
 | Conteo de filas de las seis tablas Silver | Pendiente |
-| Duplicados por clave en dimensiones Gold | Pendiente |
-| Ventas sin cliente o producto | Pendiente |
-| Consistencia entre importe, cantidad y precio | Pendiente |
+| Duplicados por customer_id y product_number en Gold | 0 grupos en los controles ejecutados |
+| Ventas sin cliente o producto | 0 |
+| Consistencia entre importe, cantidad y precio | 0 inconsistencias según la regla evaluada |
 | Duración por capa | Pendiente |
