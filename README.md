@@ -22,10 +22,10 @@ Los cuatro [diagramas editables](documentos/diagramas/README.md) documentan dist
 
 | Perspectiva | Diagrama |
 | --- | --- |
-| Arquitectura | [SQL Server y capas](documentos/diagramas/arquitectura_sql_server.drawio) |
-| Integración | [Fuentes y claves de cruce](documentos/diagramas/integracion_fuentes.drawio) |
-| Linaje | [Flujo de datos y dependencias](documentos/diagramas/flujo_datos.drawio) |
-| Modelo analítico | [Esquema estrella de ventas](documentos/diagramas/modelo_estrella.drawio) |
+| Arquitectura | [SQL Server y capas](documentos/diagramas/Diagram%20SQL%20SERVER.drawio) |
+| Integración | [Fuentes y claves de cruce](documentos/diagramas/Diagrama%20Modelo%20de%20integracion.drawio) |
+| Linaje | [Flujo de datos y dependencias](documentos/diagramas/Diagrama%20de%20Flujo.drawio) |
+| Modelo analítico | [Esquema estrella de ventas](documentos/diagramas/Data%20Model.drawio) |
 
 Los archivos se abren con draw.io/diagrams.net. Gold se implementa con vistas y las relaciones representan el modelo lógico.
 
