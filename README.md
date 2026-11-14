@@ -17,6 +17,18 @@ Construir una base de datos analítica que permita relacionar ventas con cliente
 
 El [modelo de datos y las decisiones técnicas](documentos/arquitectura.md) explican las relaciones y sus limitaciones.
 
+## Diagramas del proyecto
+Los cuatro [diagramas editables](documentos/diagramas/README.md) documentan distintas perspectivas:
+
+| Perspectiva | Diagrama |
+| --- | --- |
+| Arquitectura | [SQL Server y capas](documentos/diagramas/arquitectura_sql_server.drawio) |
+| Integración | [Fuentes y claves de cruce](documentos/diagramas/integracion_fuentes.drawio) |
+| Linaje | [Flujo de datos y dependencias](documentos/diagramas/flujo_datos.drawio) |
+| Modelo analítico | [Esquema estrella de ventas](documentos/diagramas/modelo_estrella.drawio) |
+
+Los archivos se abren con draw.io/diagrams.net. Gold se implementa con vistas y las relaciones representan el modelo lógico.
+
 ## Capacidades presentes en el código
 - **Ingesta:** carga completa de seis CSV con `TRUNCATE` y `BULK INSERT`.
 - **Deduplicación:** selección del registro de cliente más reciente mediante `ROW_NUMBER()`.
