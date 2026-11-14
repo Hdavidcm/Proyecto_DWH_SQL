@@ -5,7 +5,7 @@ Archivos editables en [diagrams.net](https://app.diagrams.net/). Descarga el arc
 | Diagrama | Archivo | Propósito |
 | --- | --- | --- |
 | Arquitectura SQL Server | [arquitectura SQL Server](https://github.com/Hdavidcm/Proyecto_DWH_SQL/blob/main/documentos/diagramas/Diagram%20SQL%20SERVER.drawio) | Fuentes, capas, objetos y consumo |
-| Integración de fuentes | [integracion_fuentes.drawio]([integracion_fuentes.drawio](https://github.com/Hdavidcm/Proyecto_DWH_SQL/blob/main/documentos/diagramas/Diagrama%20Modelo%20de%20integracion.drawio) | Claves de cruce CRM/ERP tras transformación |
+| Integración de fuentes | [integracion_fuentes.drawio](https://github.com/Hdavidcm/Proyecto_DWH_SQL/blob/main/documentos/diagramas/Diagrama%20Modelo%20de%20integracion.drawio) | Claves de cruce CRM/ERP tras transformación |
 | Flujo de datos | [flujo_datos.drawio](flujo_datos.drawio) | Linaje entre capas y dependencias Gold |
 | Modelo estrella | [modelo_estrella.drawio](modelo_estrella.drawio) | Dimensiones y detalle de ventas |
 
