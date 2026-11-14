@@ -13,10 +13,12 @@ El estado combina revisión del código y [resultados locales reportados por el 
 - [ ] Ejecución completa reproducida desde una base vacía.
 
 ## Prioridad 1: reproducibilidad
-- [ ] Añadir referencia exacta del tutorial y de sus datasets.
+- [x] Incluir los seis CSV y enlazarlos desde el README principal y la guía de datos.
+- [ ] Añadir la referencia exacta del tutorial original.
 - [ ] Ejecutar desde una base de práctica vacía siguiendo el README.
 - [ ] Registrar versión de SQL Server, filas y duración.
-- [ ] Sustituir las rutas personales por una configuración documentada.
+- [x] Documentar las rutas y nombres exactos de los seis CSV incluidos.
+- [ ] Sustituir las rutas personales del procedimiento por una configuración reutilizable.
 
 **Criterio de aceptación:** otra persona puede obtener los datos y ejecutar el proyecto siguiendo instrucciones explícitas, sin adivinar rutas u orden de pasos.
 
