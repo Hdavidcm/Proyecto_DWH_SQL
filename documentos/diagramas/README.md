@@ -2,14 +2,14 @@
 
 Archivos editables en [diagrams.net](https://app.diagrams.net/). Descarga el archivo y selecciona **Archivo > Abrir desde > Dispositivo** para visualizarlo y editarlo.
 
-| Diagrama | Archivo | Propósito |
-| --- | --- | --- |
-| Arquitectura SQL Server | [arquitectura SQL Server](Diagram%20SQL%20SERVER.drawio) | Fuentes, capas, objetos y consumo |
-| Integración de fuentes | [integracion_fuentes](Diagrama%20Modelo%20de%20integracion.drawio) | Claves de cruce CRM/ERP tras transformación |
-| Flujo de datos | [flujo_datos.drawio](Diagrama%20de%20Flujo.drawio) | Linaje entre capas y dependencias Gold |
-| Modelo estrella | [modelo_estrella.drawio](Data%20Model.drawio) | Dimensiones y detalle de ventas |
+| Perspectiva | Visualizar | Editar | Propósito |
+| --- | --- | --- | --- |
+| Arquitectura | [PDF](Diagram%20SQL%20SERVER.drawio.pdf) | [draw.io](Diagram%20SQL%20SERVER.drawio) | Fuentes, capas, objetos y consumo |
+| Integración | [PDF](Diagrama%20Modelo%20de%20integracion.drawio.pdf) | [draw.io](Diagrama%20Modelo%20de%20integracion.drawio) | Relación conceptual entre fuentes CRM y ERP |
+| Linaje | [PDF](Diagrama%20de%20Flujo.drawio.pdf) | [draw.io](Diagrama%20de%20Flujo.drawio) | Recorrido de los datos entre capas |
+| Modelo analítico | [PDF](Data%20Model.pdf) | [draw.io](Data%20Model.drawio) | Esquema estrella de ventas |
 
-[Ver modelo estrella en PDF](Data%20Model.pdf)
+Los PDF permiten consultar los diagramas sin abrir draw.io. Para modificar un diagrama, descarga su archivo editable correspondiente.
 
 ## Alcance
 Copias corregidas de los cuatro diagramas proporcionados por el autor. Los originales adjuntos se conservan sin cambios. La implementación de base sigue el ejercicio de Data with Baraa, como se explica en el README principal.
